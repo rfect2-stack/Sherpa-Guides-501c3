@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sherpa Guides - Empowering Journeys</title>
+    <!-- Load Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Font Awesome for Social Media Icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Custom Font Setup */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5; /* Lighter grey for background */
+            color: #333;
+        }
+        /* General Styling for milspec feel - GREEN TONES */
+        .text-green-600 { color: #059669; } /* Tailwind green-600 */
+        .bg-green-600 { background-color: #059669; } /* Tailwind green-600 */
+        .hover\:bg-green-700:hover { background-color: #047857; } /* Tailwind green-700 */
+
+        .btn-primary {
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 700; /* Bolder for milspec feel */
+        }
+        .btn-primary:hover {
+            box-shadow: 0 10px 15px -3px rgba(5, 150, 105, 0.5), 0 4px 6px -2px rgba(5, 150, 105, 0.2);
+            transform: translateY(-2px);
+        }
+        .section-separator {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #059669; /* Green 600 */
+            border-radius: 2px;
+            margin: 0.5rem auto 1.5rem auto;
+        }
+
+        /* Milspec Header Styling */
+        header {
+            background-color: #2e3a47; /* Darker, charcoal */
+            color: #f7f9fc;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        header .text-gray-800 { color: #f7f9fc; }
+        header .text-green-600 { color: #6ee7b7; /* Lighter green accent */ }
+        header nav a { color: #d1d5db; /* Light gray */ }
+        header nav a:hover { color: #6ee7b7; }
+        #mobile-menu-button { color: #d1d5db; }
+        #mobile-menu { background-color: #3e4a57; border-color: #4a5a6a; }
+        #mobile-menu a { color: #d1d5db; }
+        #mobile-menu a:hover { background-color: #4a5a6a; }
+
+        /* Hero Section Background - Updated with Image 1 */
+        .hero-background {
+            /* Using the panoramic image provided by the user */
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('uploaded:Gemini_Generated_Image_vgejhbvgejhbvgej.png-a975b7e1-edf5-4da5-940f-35f27e0c1a89');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: darken; /* Darkens the image for text readability */
+        }
+
+        /* Section backgrounds for milspec feel */
+        #programs { background-color: #ffffff; }
+        #about { background-color: #e0e2e6; /* Slightly darker than body bg */ }
+        #support { background-color: #e0e2e6; } /* New support section */
+        #contact { background-color: #ffffff; }
+        #portals { background-color: #ffffff; }
+
+        /* Card styling */
+        .bg-gray-50 {
+            background-color: #ffffff; /* White cards stand out on light grey background */
+            border: 1px solid #e2e8f0; /* Subtle border */
+        }
+        .bg-green-50 {
+            background-color: #f0fdf4; /* Very light green for donor portal */
+        }
+
+
+        /* Form styling */
+        form { background-color: #f7f9fc; /* Light background for form */
+               border: 1px solid #e0e2e6;
+        }
+        form input, form textarea {
+            background-color: #ffffff;
+            border-color: #cdd4dc;
+        }
+        form input:focus, form textarea:focus {
+            border-color: #059669; /* Green focus ring */
+            box-shadow: 0 0 0 1px #059669;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation --><header class="shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold">
+                <span class="text-green-600">Sherpa</span>
+                <span class="text-gray-800">Guides</span>
+            </div>
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="#our-mission" class="transition duration-150">Our Mission</a>
+                <a href="#portals" class="transition duration-150">Portals</a>
+                <a href="#programs" class="transition duration-150">Testaments</a>
+                <a href="#about" class="transition duration-150">About</a>
+                <a href="#support" class="transition duration-150">Support Us</a>
+                <a href="#contact" class="transition duration-150">Contact</a>
+            </nav>
+            <!-- Mobile Menu Button (Hamburger) --><button id="mobile-menu-button" class="md:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu --><div id="mobile-menu" class="hidden md:hidden border-t">
+            <a href="#our-mission" class="block py-2 px-4 text-sm hover:bg-gray-50 border-b">Our Mission</a>
+            <a href="#portals" class="block py-2 px-4 text-sm hover:bg-gray-50 border-b">Portals</a>
+            <a href="#programs" class="block py-2 px-4 text-sm hover:bg-gray-50 border-b">Testaments</a>
+            <a href="#about" class="block py-2 px-4 text-sm hover:bg-gray-50 border-b">About</a>
+            <a href="#support" class="block py-2 px-4 text-sm hover:bg-gray-50 border-b">Support Us</a>
+            <a href="#contact" class="block py-2 px-4 text-sm hover:bg-gray-50">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section --><section class="hero-background text-white py-20 sm:py-32 flex items-center min-h-[50vh]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight mb-4 text-shadow-lg">
+                Navigating Life's <span class="text-green-200">Heights</span> Together
+            </h1>
+            <p class="text-xl sm:text-2xl font-light mb-8 max-w-4xl mx-auto opacity-95 text-shadow-md" id="our-mission">
+                We lift burdens (real or perceived) so you can get back on the summit of life.
+            </p>
+            <a href="#support" class="btn-primary inline-block bg-white text-green-600 font-bold py-3 px-8 rounded-full shadow-lg text-lg hover:bg-gray-100 transition duration-300">
+                Support Our Mission
+            </a>
+        </div>
+    </section>
+
+    <!-- Portals Section --><section id="portals" class="py-16 sm:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-2">Access Our Mission Control</h2>
+            <div class="section-separator mx-auto"></div>
+            <p class="text-xl text-gray-700 mb-10">
+                Choose your path to engage with Sherpa Guides.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Donor Portal (Links to Email) --><a href="mailto:sherpaguides501c3@gmail.com?subject=Donation%20Inquiry%20for%20Sherpa%20Guides" class="block p-8 bg-green-50 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-[1.02] border-t-4 border-green-600">
+                    <i class="fas fa-hand-holding-dollar text-5xl text-green-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Donor Portal</h3>
+                    <p class="text-gray-700">Initiate your donation process by contacting us via email. Tax ID: 82-1951475.</p>
+                </a>
+                <!-- Beneficiary Portal (Links to Email) --><a href="mailto:sherpaguides501c3@gmail.com?subject=Beneficiary%20Support%20Inquiry" class="block p-8 bg-gray-50 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-[1.02] border-t-4 border-green-600">
+                    <i class="fas fa-compass text-5xl text-green-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Beneficiary Portal</h3>
+                    <p class="text-gray-700">Contact us to access personalized resources, connect with guides, and enroll in programs.</p>
+                </a>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Champion Testaments Section --><section id="programs" class="py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-2">Champion Testaments</h2>
+            <div class="section-separator mx-auto"></div>
+            <p class="text-xl text-gray-700 mb-12">
+                Hear directly from those who have found their summit with Sherpa Guides.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Testimonial 1: The Resilient Explorer (Wheelchair) --><div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-[1.02]">
+                    <img src="uploaded:Gemini_Generated_Image_bn5jt5bn5jt5bn5j.png-b0189a8c-c853-4430-9f4c-aade1903b9b0"
+                         alt="A resilient man in an all-terrain wheelchair navigating a mountain path, smiling"
+                         class="w-full h-auto rounded-lg mb-4 object-cover">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">The Resilient Explorer</h3>
+                    <p class="text-gray-700 italic">
+                        "Thanks to Sherpa Guides, I rediscovered my strength. They didn't just provide resources; they gave me a path to continue my passion for nature, making me feel unstoppable. I reached my personal summit of independence!"
+                    </p>
+                </div>
+                <!-- Testimonial 2: The Focused Achiever (Bionic Arm) --><div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-[1.02]">
+                    <img src="uploaded:Gemini_Generated_Image_iy8bj2iy8bj2iy8b.png-d9960842-48af-4994-a820-c816224ac328"
+                         alt="A focused woman with a bionic arm working confidently at a strategic control panel"
+                         class="w-full h-auto rounded-lg mb-4 object-cover">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">The Focused Achiever</h3>
+                    <p class="text-gray-700 italic">
+                        "Sherpa Guides understood my unique challenges and helped me build confidence to pursue my career goals. Their mentorship was like seeing clearly for the first time. I found my summit in professional achievement!"
+                    </p>
+                </div>
+                <!-- Testimonial 3: The Guided Navigator (Blind/Cane) --><div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-[1.02]">
+                    <img src="uploaded:Gemini_Generated_Image_uqainfuqainfuqai.png-ca1d4338-0db9-4da5-90f5-1a458adf8041"
+                         alt="A blind man navigating a trail using a cane, wearing tactical gear, symbolizing guided exploration"
+                         class="w-full h-auto rounded-lg mb-4 object-cover">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">The Guided Navigator</h3>
+                    <p class="text-gray-700 italic">
+                        "Connecting with Sherpa Guides was a turning point. They provided the tools and community that helped me break through isolation. Now, I feel truly heard and part of something bigger. This is my summit of connection and belonging!"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section --><section id="about" class="py-16 sm:py-24 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:items-center md:space-x-12">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <!-- Using the closer-up image provided by the user --><img src="uploaded:Gemini_Generated_Image_34w90r34w90r34w9.png-ba18f10e-7d6a-45d8-b4ce-e239e1827c93"
+                         alt="Sherpa Guides non-profit team member providing support"
+                         class="rounded-xl shadow-2xl object-cover w-full h-auto">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-2">Our Story & Vision</h2>
+                    <div class="section-separator mx-0"></div>
+                    <p class="text-gray-700 text-lg mb-6">
+                        Sherpa Guides was founded on the belief that every individual, regardless of their starting point or perceived limitations, possesses the strength to conquer their own "summits." We are a non-profit 501(c)(3) organization driven by compassion and a commitment to action.
+                    </p>
+                    <p class="text-gray-700 text-lg">
+                        Inspired by the enduring spirit of the Sherpa, our navigators dedicate themselves to providing personalized support, accessible resources, and a community where every step forward is celebrated. We envision a world where barriers are diminished, and potential is limitless.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Us Section --><section id="support" class="bg-gray-800 text-white py-16 sm:py-20 text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-3xl sm:text-4xl font-extrabold mb-4">Join Our Expedition</h3>
+            <p class="text-xl font-light opacity-90 mb-4">
+                As a 501(c)(3) non-profit, your contribution directly impacts lives, providing the tools and support needed for individuals to achieve their personal breakthroughs.
+            </p>
+            <p class="text-lg font-bold opacity-90 mb-8">
+                Tax ID (EIN): 82-1951475
+            </p>
+            <a href="mailto:sherpaguides501c3@gmail.com?subject=Donation%20Inquiry%20for%20Sherpa%20Guides" class="btn-primary inline-block bg-green-600 text-white font-bold py-3 px-8 rounded-full shadow-lg text-lg hover:bg-green-700 transition duration-300">
+                Donate & Support
+            </a>
+            <p class="text-lg font-light opacity-80 mt-6">
+                Every contribution helps us guide another soul to their summit.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section --><section id="contact" class="py-16 sm:py-24">
+        <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-2">Connect With Us</h2>
+            <div class="section-separator mx-auto"></div>
+            <p class="text-xl text-gray-700 mb-10">
+                Reach out to learn more, volunteer, or partner with Sherpa Guides.
+            </p>
+
+            <form class="space-y-6 bg-white p-8 rounded-xl shadow-2xl border border-gray-100">
+                <div>
+                    <input type="text" placeholder="Your Name" required
+                           class="w-full p-3 border rounded-lg focus:ring-green-600 focus:border-green-600 transition duration-150">
+                </div>
+                <div>
+                    <input type="email" placeholder="Your Email" required
+                           class="w-full p-3 border rounded-lg focus:ring-green-600 focus:border-green-600 transition duration-150">
+                </div>
+                <div>
+                    <textarea placeholder="Your Message, Inquiry, or How You'd Like to Help" rows="4" required
+                              class="w-full p-3 border rounded-lg focus:ring-green-600 focus:border-green-600 transition duration-150"></textarea>
+                </div>
+                <button type="submit"
+                        class="w-full btn-primary bg-green-600 text-white font-bold py-3 rounded-lg hover:bg-green-700 transition duration-300 shadow-md">
+                    Send Message
+                </button>
+                <p class="text-sm text-gray-600 mt-4">
+                    Or direct communication: <a href="mailto:sherpaguides501c3@gmail.com" class="text-green-600 hover:underline">sherpaguides501c3@gmail.com</a>
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer --><footer class="text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+            <p>&copy; <span id="current-year"></span> Sherpa Guides, a 501(c)(3) Non-Profit Organization. EIN: 82-1951475. All rights reserved. Empowering Journeys.</p>
+            
+            <!-- Social Media Icons --><div class="flex justify-center space-x-6 mt-4 mb-4">
+                <!-- Facebook --><a href="https://facebook.com/sherpaguides501c3" target="_blank" rel="noopener noreferrer" class="text-2xl hover:text-green-400 transition duration-150" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <!-- Instagram --><a href="https://instagram.com/sherpaguides501c3" target="_blank" rel="noopener noreferrer" class="text-2xl hover:text-green-400 transition duration-150" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+
+            <div class="mt-2 space-x-4">
+                <a href="#" class="hover:text-green-400 transition duration-150">Privacy Protocol</a>
+                <a href="#" class="hover:text-green-400 transition duration-150">Terms of Engagement</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- JavaScript for Mobile Menu and Footer Year --><script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = mobileMenu.querySelectorAll('a');
+
+            // Toggle mobile menu visibility
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when a link is clicked
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // Update current year in the footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Simple form submission handler (prevent default)
+            document.querySelector('form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                // In a real application, you would send this data to a server here.
+                console.log('Form Submitted!');
+
+                // Display a success message
+                const form = e.target;
+                const successMessage = document.createElement('p');
+                successMessage.textContent = "Thank you! Your message has been sent to Sherpa Guides.";
+                successMessage.className = "mt-4 text-green-600 font-semibold";
+
+                // Clear the form fields
+                form.reset();
+
+                // Append the message (or replace the form content)
+                const existingMessage = form.parentNode.querySelector('.text-green-600');
+                if (existingMessage) existingMessage.remove();
+                form.parentNode.appendChild(successMessage);
+            });
+        });
+    </script>
+</body>
+</html>
